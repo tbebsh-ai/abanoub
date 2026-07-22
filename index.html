@@ -1,121 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover delicious and premium food recipes from around the world.">
-    <title>Culina - Premium Food Recipes</title>
+    <title>أكاديمية المستقبل | حجز الدروس</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="header">
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Culina<span>.</span></a>
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#recipes">Recipes</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <a href="#" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i> أكاديمية <span>المستقبل</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#subjects">المواد الدراسية</a></li>
+                <li><a href="#features">المميزات</a></li>
+                <li><a href="#book" class="btn-primary">احجز الآن</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>ارتقِ بمستواك التعليمي مع أفضل المعلمين</h1>
+                <p>نوفر لك منصة متكاملة لحجز دروسك الخصوصية في مختلف المواد الدراسية، مع نخبة من المعلمين المتميزين. ابدأ رحلة التفوق الآن.</p>
+                <div class="hero-btns">
+                    <a href="#book" class="btn-primary btn-large">احجز حصتك الأولى</a>
+                    <a href="#subjects" class="btn-secondary btn-large">تصفح المواد</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="blob-bg"></div>
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students studying">
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-bg">
-                <img src="hero_food.png" alt="Delicious dining table spread">
-                <div class="hero-overlay"></div>
+    <!-- Subjects Section -->
+    <section id="subjects" class="subjects-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>المواد <span>الدراسية</span></h2>
+                <p>اختر من بين مجموعة واسعة من المواد الدراسية التي تناسب احتياجاتك</p>
             </div>
-            <div class="container hero-content">
-                <h1 class="hero-title animate-on-scroll fade-up">Taste the Art of<br>Fine Dining.</h1>
-                <p class="hero-subtitle animate-on-scroll fade-up delay-1">Explore our exquisite collection of premium recipes crafted for culinary perfection.</p>
-                <a href="#recipes" class="btn btn-primary animate-on-scroll fade-up delay-2">Explore Recipes</a>
-            </div>
-        </section>
-
-        <section id="recipes" class="recipes-section">
-            <div class="container">
-                <div class="section-header animate-on-scroll fade-up">
-                    <h2>Popular Recipes</h2>
-                    <p>Curated dishes that will delight your senses</p>
+            <div class="subjects-grid">
+                <!-- Subject Card 1 -->
+                <div class="subject-card">
+                    <div class="icon-box math">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3>الرياضيات</h3>
+                    <p>الجبر، الهندسة، الإحصاء</p>
+                    <a href="#book" class="book-link" onclick="selectSubject('الرياضيات')">احجز الآن <i class="fa-solid fa-arrow-left"></i></a>
                 </div>
+                <!-- Subject Card 2 -->
+                <div class="subject-card">
+                    <div class="icon-box science">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3>العلوم</h3>
+                    <p>فيزياء، كيمياء، أحياء</p>
+                    <a href="#book" class="book-link" onclick="selectSubject('العلوم')">احجز الآن <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+                <!-- Subject Card 3 -->
+                <div class="subject-card">
+                    <div class="icon-box languages">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h3>اللغات</h3>
+                    <p>العربية، الإنجليزية، الفرنسية</p>
+                    <a href="#book" class="book-link" onclick="selectSubject('اللغات')">احجز الآن <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+                <!-- Subject Card 4 -->
+                <div class="subject-card">
+                    <div class="icon-box programming">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>البرمجة</h3>
+                    <p>بايثون، جافا سكريبت، تصميم الويب</p>
+                    <a href="#book" class="book-link" onclick="selectSubject('البرمجة')">احجز الآن <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="booking-section">
+        <div class="container booking-container">
+            <div class="booking-content">
+                <h2>احجز <span>جلستك</span> التعليمية</h2>
+                <p>قم بملء النموذج التالي وسيقوم فريقنا بالتواصل معك لتأكيد الحجز وتحديد المعلم المناسب لك.</p>
                 
-                <div class="recipes-grid">
-                    <!-- Recipe 1 -->
-                    <article class="recipe-card animate-on-scroll fade-up">
-                        <div class="recipe-img-container">
-                            <img src="steak.png" alt="Grilled Steak" class="recipe-img">
-                            <div class="recipe-time"><span class="icon">⏱</span> 45 Min</div>
-                        </div>
-                        <div class="recipe-content">
-                            <span class="recipe-category">Main Course</span>
-                            <h3 class="recipe-title">Perfectly Grilled Steak</h3>
-                            <p class="recipe-desc">Juicy grilled steak with rosemary and roasted vegetables on a dark slate board.</p>
-                            <a href="#" class="recipe-link">View Recipe &rarr;</a>
-                        </div>
-                    </article>
-
-                    <!-- Recipe 2 -->
-                    <article class="recipe-card animate-on-scroll fade-up delay-1">
-                        <div class="recipe-img-container">
-                            <img src="chocolate_cake.png" alt="Chocolate Cake" class="recipe-img">
-                            <div class="recipe-time"><span class="icon">⏱</span> 60 Min</div>
-                        </div>
-                        <div class="recipe-content">
-                            <span class="recipe-category">Dessert</span>
-                            <h3 class="recipe-title">Rich Chocolate Cake</h3>
-                            <p class="recipe-desc">A delicious looking slice of rich chocolate cake with glossy ganache.</p>
-                            <a href="#" class="recipe-link">View Recipe &rarr;</a>
-                        </div>
-                    </article>
-
-                    <!-- Recipe 3 -->
-                    <article class="recipe-card animate-on-scroll fade-up delay-2">
-                        <div class="recipe-img-container">
-                            <img src="greek_salad.png" alt="Greek Salad" class="recipe-img">
-                            <div class="recipe-time"><span class="icon">⏱</span> 15 Min</div>
-                        </div>
-                        <div class="recipe-content">
-                            <span class="recipe-category">Appetizer</span>
-                            <h3 class="recipe-title">Vibrant Greek Salad</h3>
-                            <p class="recipe-desc">Fresh and vibrant greek salad with feta cheese, olives, and tomatoes.</p>
-                            <a href="#" class="recipe-link">View Recipe &rarr;</a>
-                        </div>
-                    </article>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>مواعيد مرنة تناسب جدولك</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>أسعار تنافسية وباقات متنوعة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>دعم فني وتواصل مستمر</span>
+                    </div>
                 </div>
             </div>
-        </section>
-        
-        <section id="about" class="about-section">
-            <div class="container about-container animate-on-scroll fade-up">
-                <div class="about-text">
-                    <h2>Our Culinary Journey</h2>
-                    <p>At Culina, we believe that cooking is an art form. We gather the finest recipes from around the world, testing and refining them so you can create masterpiece dishes in your own kitchen.</p>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-        </section>
-    </main>
+            
+            <div class="booking-form-wrapper">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" required placeholder="أدخل اسمك الكامل">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" required placeholder="أدخل رقم هاتفك للتواصل">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">المادة الدراسية</label>
+                        <select id="subject" required>
+                            <option value="" disabled selected>اختر المادة الدراسية</option>
+                            <option value="الرياضيات">الرياضيات</option>
+                            <option value="العلوم">العلوم (فيزياء - كيمياء - أحياء)</option>
+                            <option value="اللغات">اللغات (عربي - انجليزي - فرنسي)</option>
+                            <option value="البرمجة">البرمجة والحاسب الآلي</option>
+                        </select>
+                    </div>
 
-    <footer class="footer">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">التاريخ المفضل</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">الوقت المفضل</label>
+                            <input type="time" id="time" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">تأكيد الحجز <i class="fa-solid fa-paper-plane"></i></button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
         <div class="container footer-content">
             <div class="footer-brand">
-                <a href="#" class="logo">Culina<span>.</span></a>
-                <p>Bringing the world's finest flavors to your table.</p>
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-graduation-cap"></i> أكاديمية <span>المستقبل</span>
+                </a>
+                <p>المنصة الرائدة في تقديم الدروس الخصوصية عبر الإنترنت وحضورياً.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#subjects">المواد</a></li>
+                    <li><a href="#features">من نحن</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>تواصل معنا</h3>
+                <p><i class="fa-solid fa-phone"></i> +966 50 000 0000</p>
+                <p><i class="fa-solid fa-envelope"></i> info@futureacademy.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية السعودية</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Culina. All rights reserved.</p>
+            <p>&copy; 2026 أكاديمية المستقبل. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
